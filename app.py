@@ -221,7 +221,7 @@ def encode_pout(selected_item):
 selected_poutcome = encode_pout(selected_poutcome)
 
 
-pickle_in = open("model2.pkl", "rb")
+pickle_in = open("https://github.com/ggkasman/Default-Prediction-Web-App-Streamlit/blob/main/model2.pkl", "rb")
 classifier = pkl.load(pickle_in)
 
 
