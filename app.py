@@ -221,7 +221,7 @@ def encode_pout(selected_item):
 ### Using function for encoding
 selected_poutcome = encode_pout(selected_poutcome)
 
-url = "model2.pkl"
+url = "https://github.com/ggkasman/Default-Prediction-Web-App-Streamlit/blob/23c0fd8cbccf91b2be7ae94706bd533c8c0893a7/model2.pkl"
 response = requests.get(url)
 model = pickle.loads(response.content)
 
