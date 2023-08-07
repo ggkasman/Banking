@@ -1,4 +1,4 @@
-# Default Prediction Web App with Streamlit
+# Prediction of Term Deposit Subscription - Web App with Streamlit
 
 Our project, which is related to direct marketing campaigns (phone calls) of a Portuguese banking institution, aims to predict whether the client  will subscribe to a term deposit (variable y).
 
