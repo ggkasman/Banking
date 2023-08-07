@@ -5,6 +5,7 @@ feeds them to the model. The resulting model predictions are displayed in the ap
 
 import pandas as pd
 import streamlit as st
+import requests
 import pickle as pkl
 import os
 import streamlit as st
@@ -220,10 +221,9 @@ def encode_pout(selected_item):
 ### Using function for encoding
 selected_poutcome = encode_pout(selected_poutcome)
 
-
-pickle_in = open("https://github.com/ggkasman/Default-Prediction-Web-App-Streamlit/blob/main/model2.pkl", "rb")
-classifier = pkl.load(pickle_in)
-
+url = "https://raw.githubusercontent.com/ggkasman/Default-Prediction-Web-App-Streamlit/main/model2.pkl"
+response = requests.get(url)
+model = pickle.loads(response.content)
 
 prediction = classifier.predict([[selected_age, selected_job,
                                   selected_marital, selected_education,
