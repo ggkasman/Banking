@@ -221,9 +221,8 @@ def encode_pout(selected_item):
 ### Using function for encoding
 selected_poutcome = encode_pout(selected_poutcome)
 
-url = "https://github.com/ggkasman/Default-Prediction-Web-App-Streamlit/blob/23c0fd8cbccf91b2be7ae94706bd533c8c0893a7/model2.pkl"
-response = requests.get(url)
-model = pickle.loads(response.content)
+pickle_in = open("/Users/gamzekasman/PycharmProjects/pythonProject/model2.pkl", "rb")
+classifier = pkl.load(pickle_in)
 
 prediction = classifier.predict([[selected_age, selected_job,
                                   selected_marital, selected_education,
