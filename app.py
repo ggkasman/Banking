@@ -221,7 +221,7 @@ def encode_pout(selected_item):
 selected_poutcome = encode_pout(selected_poutcome)
 
 
-pickle_in = open("/Users/gamzekasman/PycharmProjects/pythonProject/model2.pkl", "rb")
+pickle_in = open("model2.pkl", "rb")
 classifier = pkl.load(pickle_in)
 
 
